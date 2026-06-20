@@ -226,8 +226,11 @@ faktor_summary = get_faktor_summary(df)
 BASE_LAYOUT = dict(
     paper_bgcolor="rgba(0,0,0,0)",
     plot_bgcolor="rgba(0,0,0,0)",
-    font=dict(family="Inter", color="#6B6256", size=12),
-    margin=dict(t=24, b=10, l=10, r=10),
+    font=dict(
+        family="Inter",
+        color="#6B6256",
+        size=12
+    )
 )
 
 
