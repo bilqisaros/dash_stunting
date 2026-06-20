@@ -10,7 +10,7 @@ import streamlit as st
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
-DATA_DIR = BASE_DIR / "data"
+DATA_DIR = BASE_DIR / "df_final.csv"
 
 
 VAR_LABELS = {
