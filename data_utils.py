@@ -10,8 +10,7 @@ import streamlit as st
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
-DATA_DIR = BASE_DIR / "df_final.csv"
-
+DATA_DIR = BASE_DIR
 
 VAR_LABELS = {
     "kemiskinan": "Persentase Penduduk Miskin",
@@ -46,7 +45,6 @@ KATEGORI_COLORS = {
 }
 
 KATEGORI_ORDER = ["Rendah", "Sedang", "Tinggi", "Sangat Tinggi"]
-
 
 @st.cache_data
 def load_data():
