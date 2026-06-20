@@ -548,13 +548,11 @@ elif page == "Peta Sebaran Stunting":
             showframe=False,
             bgcolor="rgba(0,0,0,0)",
         )
-        layout_map = BASE_LAYOUT.copy()
-        layout_map["margin"] = dict(t=10, b=10, l=0, r=0)
-
         fig.update_layout(
-        **layout_map,
+        **BASE_LAYOUT,
         height=560,
         legend=...,
+        margin=dict(t=10, b=10, l=0, r=0),
         )
         st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
         st.markdown("""
