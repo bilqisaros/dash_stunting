@@ -7,6 +7,10 @@ pada 404 kabupaten/kota di Indonesia.
 import pandas as pd
 import numpy as np
 import streamlit as st
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR / "data"
 
 
 VAR_LABELS = {
@@ -46,8 +50,8 @@ KATEGORI_ORDER = ["Rendah", "Sedang", "Tinggi", "Sangat Tinggi"]
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data/df_final.csv")
-    missing = pd.read_csv("data/missing_regencies.csv")
+    df = pd.read_csv(DATA_DIR / "df_final.csv")
+    missing = pd.read_csv(DATA_DIR / "missing_regencies.csv")
     return df, missing
 
 
