@@ -554,7 +554,15 @@ elif page == "Peta Sebaran Stunting":
         fig.update_layout(
         **BASE_LAYOUT,
         height=560,
-        legend=...,
+        legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=0.01,
+        xanchor="left",
+        x=0.01,
+        font=dict(size=11, color="#2B2620"),
+        bgcolor="rgba(255,255,255,0.75)"
+        ),
         margin=dict(t=10, b=10, l=0, r=0),
         )
         st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
